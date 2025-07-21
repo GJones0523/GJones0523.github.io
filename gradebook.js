@@ -27,8 +27,8 @@ function fetchGradeData() {
 // TODO: Populate the table with grade data
 function populateGradebook(data) {
     // This function will take the fetched grade data and populate the table
-    console.log("Populating gradebook with data;", data);
-    let tableE1m = document.getElementById("gradebook"); // Get the gradebook table element
+    console.log("Populating gradebook with data:", data);
+    let tableElm = document.getElementById("gradebook"); // Get the gradebook table element
         data.forEach(function(assignment){ // For each row of data we're passed in
             let row = document.createElement("tr"); // create a table row element
             let columns = []; // Handy place to stick the columns of information
@@ -47,7 +47,7 @@ function populateGradebook(data) {
             row.appendChild(columns.name);
             row.appendChild(columns.grade);
             // Add the row to the table itself to make the data visible
-            tableE1m.appendChild(row);
+            tableElm.appendChild(row);
         });
 }
 
